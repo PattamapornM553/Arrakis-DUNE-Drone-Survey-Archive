@@ -137,7 +137,6 @@ function formatThaiTime(dateString) {
   });
 }
 
-// Page #3: Table + Pagination
 async function loadLogs() {
   const tb = $('#rows');
 
@@ -152,8 +151,7 @@ async function loadLogs() {
   note('Consulting the archive...');
 
   try {
-    // ใช้ Config ที่เก็บไว้ใน localStorage
-    // หากยังไม่มี ให้โหลด Config จาก API ก่อน
+    
     const config = getCfg() || (await loadConfig());
 
     if (!config || !config.drone_id) {
@@ -164,7 +162,6 @@ async function loadLogs() {
       return;
     }
 
-    // เรียก Logs โดยใช้ Drone ID จาก Config
     const r = await api(
       `/logs/${config.drone_id}?page=${page}`
     );
@@ -192,7 +189,7 @@ async function loadLogs() {
       });
     }
 
-    // แสดงเลขหน้าและควบคุมปุ่ม Pagination
+   
     $('#pg').textContent = `Page ${page} / ${total}`;
     $('#prev').disabled = page <= 1;
     $('#next').disabled = page >= total;
