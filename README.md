@@ -25,8 +25,13 @@ DUNE Drone Monitoring System เป็นเว็บไซต์สำหรั
 - ไฟล์ .env ใช้เก็บ URL และ API Token สำหรับเชื่อมต่อกับเซิร์ฟเวอร์จริง จึงไม่ให้นำไฟล์ขึ้น GitHub
 - ให้ใช้ไฟล์ .env.example เป็นตัวอย่างสำหรับตั้งค่าแทนการเผยแพร่ข้อมูลจริงค่ะ
 
+## URL สำหรับเข้าใช้งาน
 
-## ติดตั้ง tools ก่อนรัน
+- Website: https://arrakis-dune-drone-survey-archive-1.onrender.com
+- API Server: https://arrakis-dune-drone-survey-archive.onrender.com/
+
+
+## ติดตั้ง tools ก่อนรันบน VS Code
 
 - Node.js เวอร์ชัน 18 ขึ้นไป
 - npm ซึ่งติดตั้งมาพร้อมกับ Node.js
