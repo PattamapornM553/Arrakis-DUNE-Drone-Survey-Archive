@@ -220,7 +220,7 @@ app.post('/logs', wrap(async (req, res) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: LOG_API_TOKEN,
+      Authorization: `Bearer ${LOG_API_TOKEN}`,
     },
     body: JSON.stringify(body),
   });
