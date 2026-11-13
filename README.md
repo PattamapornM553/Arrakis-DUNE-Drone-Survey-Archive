@@ -67,7 +67,7 @@ CONFIG_URL=URL ของ Drone Config Server
 
 LOG_URL=URL ของ Drone Log Server
 
-LOG_API_TOKEN=20260901verbera
+LOG_API_TOKEN=API TOKEN ที่อาจารย์กำหนดในassignment
 PORT=3000
 
 - เมื่อกำหนดค่าเรียบร้อยแล้ว ให้เริ่ม API Server ด้วยคำสั่ง
