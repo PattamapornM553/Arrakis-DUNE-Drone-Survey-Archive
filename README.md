@@ -59,7 +59,9 @@ Copy-Item .env.example .env
 *กรณีต้องการเปลี่ยน DRONE_ID* เปิดไฟล์ api/.env และกำหนดค่าตาม API ของตนเองที่ได้รับจาก server อาจารย์ 
 
 CONFIG_URL=URL ของ Drone Config Server
+
 LOG_URL=URL ของ Drone Log Server
+
 LOG_API_TOKEN=20260901verbera
 PORT=3000
 
@@ -90,7 +92,9 @@ Copy-Item .env.example .env
 - เปิดไฟล์ web/.env และกำหนดค่า drone ตัวเอง
 
 DRONE_ID=67010553
+
 API_URL=http://localhost:3000
+
 PORT=8080
 
 โดย DRONE_ID คือหมายเลขประจำตัวโดรนที่ต้องการใช้งาน และ API_URL คือ URL ของ API Server
