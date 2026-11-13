@@ -215,7 +215,7 @@ app.post('/logs', wrap(async (req, res) => {
     country,
     celsius: Number(celsius),
   };
-
+  
   const r = await fetch(LOG_URL, {
     method: 'POST',
     headers: {
