@@ -225,11 +225,25 @@ app.post('/logs', wrap(async (req, res) => {
     body: JSON.stringify(body),
   });
 
-  if (!r.ok) {
-    throw fail(502, `Log server responded ${r.status}`);
+    const responseText = await r.text();
+
+  let c = {};
+  try {
+    c = responseText ? JSON.parse(responseText) : {};
+  } catch {
+    c = { message: responseText };
   }
 
-  const c = await r.json();
+  if (!r.ok) {
+    console.error('PocketBase Error:', r.status, c);
+
+    throw fail(
+      r.status,
+      `Log server responded ${r.status}: ${
+        c.message || 'Unknown error'
+      } | ${JSON.stringify(c.data || {})}`
+    );
+  }
 
   res.status(201).json({
     drone_id: c.drone_id,
