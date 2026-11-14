@@ -30,7 +30,7 @@ DUNE Drone Monitoring System เป็นเว็บไซต์สำหรั
 - Website: https://arrakis-dune-drone-survey-archive-1.onrender.com
 - API Server: https://arrakis-dune-drone-survey-archive.onrender.com/
 
-หมายเหตุ: เมื่อเปิดหน้าเว็บที่ได้ Deploy บน Render จะใช้เวลาประมาณ 30 ถึง 60 วินาที ในการเปิดขึ้นมาครั้งแรก และดึงข้อมูลสักครู่ค่ะ
+หมายเหตุ: หมายเหตุ: เนื่องจาก Render Free จะหยุดการทำงานของ Web Service เมื่อไม่มีการใช้งานเป็นระยะเวลาหนึ่ง เมื่อมีการเรียกใช้งานอีกครั้ง เซิร์ฟเวอร์อาจใช้เวลาประมาณ 30–60 วินาทีในการเริ่มทำงาน และโหลดข้อมูลจาก API Server ค่ะ
 
 ## ติดตั้ง tools ก่อนรันบน VS Code
 
@@ -63,13 +63,13 @@ npm install
 
 Copy-Item .env.example .env
 
-*กรณีต้องการเปลี่ยน DRONE_ID* เปิดไฟล์ api/.env และกำหนดค่าตาม API ของตนเองที่ได้รับจาก server อาจารย์ 
+*กรณีต้องการเปลี่ยน DRONE_ID* เปิดไฟล์ web/.env และกำหนดค่าตาม API ของตนเองที่ได้รับจาก server อาจารย์ 
 
 CONFIG_URL=URL ของ Drone Config Server
 
 LOG_URL=URL ของ Drone Log Server
 
-LOG_API_TOKEN=API TOKEN ที่อาจารย์กำหนดในassignment
+LOG_API_TOKEN=API TOKEN ที่อาจารย์กำหนด
 
 PORT=3000
 
@@ -122,3 +122,11 @@ Frontend running
 
 http://localhost:8080
 
+## API Endpoints
+
+GET	/configs/:droneId	ดึงข้อมูลพื้นฐานของโดรน
+GET	/status/:droneId	ตรวจสอบสถานะของโดรน
+GET	/logs/:droneId?page=1	ดึงประวัติอุณหภูมิของโดรน
+POST	/logs	บันทึกข้อมูลอุณหภูมิ
+
+หมายเหตุ: การเรียกใช้งาน API จากเว็บไซต์จะเรียกผ่าน API Server ของโปรเจกต์นี้ไม่ได้เรียก Drone Config Server หรือ Drone Log Server โดยตรงตามที่อาจารย์ได้กำหนดไว้ค่ะ
