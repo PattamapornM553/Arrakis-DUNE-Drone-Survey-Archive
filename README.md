@@ -122,7 +122,7 @@ Frontend running
 
 http://localhost:8080
 
-## API Endpoints
+### API Endpoints
 
 GET	/configs/:droneId	ดึงข้อมูลพื้นฐานของโดรน
 GET	/status/:droneId	ตรวจสอบสถานะของโดรน
