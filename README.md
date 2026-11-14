@@ -23,9 +23,9 @@ DUNE Drone Monitoring System เป็นเว็บไซต์สำหรั
 - ตรวจสอบค่าในไฟล์ .env ให้ถูกต้องก่อนเริ่มเซิร์ฟเวอร์
 - หากมีการแก้ไขค่าในไฟล์ .env ควรเริ่มเซิร์ฟเวอร์ใหม่เพื่อให้ระบบอ่านค่าที่เปลี่ยนแปลง
 - ไฟล์ .env ใช้เก็บ URL และ API Token สำหรับเชื่อมต่อกับเซิร์ฟเวอร์จริง จึงไม่ให้นำไฟล์ขึ้น GitHub
-- ให้ใช้ไฟล์ .env.example เป็นตัวอย่างสำหรับตั้งค่าแทนการเผยแพร่ข้อมูลจริงค่ะ
+- ในโฟลเดอร์จะมีไฟล์ .env.example เป็นตัวอย่างสำหรับตั้งค่าแทนการเผยแพร่ข้อมูลจริงเท่านั้นค่ะ
 
-## URL สำหรับเข้าใช้งาน
+## URL สำหรับเข้าใช้งาน web และ api
 
 - Website: https://arrakis-dune-drone-survey-archive-1.onrender.com
 - API Server: https://arrakis-dune-drone-survey-archive.onrender.com/
@@ -46,6 +46,7 @@ npm -v
 
 ระบบประกอบด้วย API Server และ Web Server ซึ่งต้องเปิดใช้งานพร้อมกัน โดยให้เปิด Terminal แยกกัน 2 terminal
 
+### DRONE API SERVER
 ### 1. ตั้งค่าและเปิด API Server
 
 - เปิด Terminal แล้วเข้าไปยังโฟลเดอร์ api 
@@ -80,8 +81,10 @@ npm start
 
 API listening on :3000
 
-- API Server จะเปิดให้ใช้งานที่ `http://localhost:3000`
+- API Server จะเปิดให้ใช้งานที่ http://localhost:3000
 
+
+### DRONE WEB SERVER
 ### 2. ตั้งค่าและเปิดเว็บไซต์
 
 - เปิด Terminal อีกหน้าต่างหนึ่งแล้วเข้าไปยังโฟลเดอร์ web
@@ -114,7 +117,7 @@ npm start
 
 Frontend running
 
-เปิดเว็บไซต์ผ่านเบราว์เซอร์ได้ที่
+- เปิดเว็บไซต์ผ่านเบราว์เซอร์ได้ที่
 
 http://localhost:8080
 
