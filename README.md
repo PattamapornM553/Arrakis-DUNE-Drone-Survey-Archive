@@ -46,7 +46,7 @@ npm -v
 
 ระบบประกอบด้วย API Server และ Web Server ซึ่งต้องเปิดใช้งานพร้อมกัน โดยให้เปิด Terminal แยกกัน 2 terminal
 
-### DRONE API SERVER
+## DRONE API SERVER
 ### 1. ตั้งค่าและเปิด API Server
 
 - เปิด Terminal แล้วเข้าไปยังโฟลเดอร์ api 
@@ -84,7 +84,7 @@ API listening on :3000
 - API Server จะเปิดให้ใช้งานที่ http://localhost:3000
 
 
-### DRONE WEB SERVER
+## DRONE WEB SERVER
 ### 2. ตั้งค่าและเปิดเว็บไซต์
 
 - เปิด Terminal อีกหน้าต่างหนึ่งแล้วเข้าไปยังโฟลเดอร์ web
