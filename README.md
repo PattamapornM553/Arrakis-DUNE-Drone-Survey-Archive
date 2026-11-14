@@ -30,7 +30,7 @@ DUNE Drone Monitoring System เป็นเว็บไซต์สำหรั
 - Website: https://arrakis-dune-drone-survey-archive-1.onrender.com
 - API Server: https://arrakis-dune-drone-survey-archive.onrender.com/
 
-หมายเหตุ: หมายเหตุ: เนื่องจาก Render Free จะหยุดการทำงานของ Web Service เมื่อไม่มีการใช้งานเป็นระยะเวลาหนึ่ง เมื่อมีการเรียกใช้งานอีกครั้ง เซิร์ฟเวอร์อาจใช้เวลาประมาณ 30–60 วินาทีในการเริ่มทำงาน และโหลดข้อมูลจาก API Server ค่ะ
+หมายเหตุ: เนื่องจาก Render Free จะหยุดการทำงานของ Web Service เมื่อไม่มีการใช้งานเป็นระยะเวลาหนึ่ง เมื่อมีการเรียกใช้งานอีกครั้ง เซิร์ฟเวอร์อาจใช้เวลาประมาณ 30–60 วินาทีในการเริ่มทำงาน และโหลดข้อมูลจาก API Server ค่ะ
 
 ## ติดตั้ง tools ก่อนรันบน VS Code
 
