@@ -125,8 +125,12 @@ http://localhost:8080
 ### API Endpoints
 
 GET	/configs/:droneId	ดึงข้อมูลพื้นฐานของโดรน
+
 GET	/status/:droneId	ตรวจสอบสถานะของโดรน
+
 GET	/logs/:droneId?page=1	ดึงประวัติอุณหภูมิของโดรน
+
 POST	/logs	บันทึกข้อมูลอุณหภูมิ
+
 
 หมายเหตุ: การเรียกใช้งาน API จากเว็บไซต์จะเรียกผ่าน API Server ของโปรเจกต์นี้ไม่ได้เรียก Drone Config Server หรือ Drone Log Server โดยตรงตามที่อาจารย์ได้กำหนดไว้ค่ะ
